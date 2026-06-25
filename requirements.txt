@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+google-genai
+groq
+openai
+httpx
+requests
+beautifulsoup4
+duckduckgo-search
+pydantic
+sqlalchemy==2.0.36
+greenlet==3.1.1
+aiosqlite
+python-multipart
+pytest
+pytest-asyncio
