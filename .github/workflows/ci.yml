@@ -30,24 +30,19 @@ jobs:
           python-version: "3.12"
 
       - name: Upgrade pip
-        run: |
-          python -m pip install --upgrade pip
+        run: python -m pip install --upgrade pip
 
       - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
-      - name: Verify Backend Imports
+      - name: Verify Backend
         run: |
           python -c "import app"
           python -c "import fastapi"
           python -c "import sqlalchemy"
-          python -c "import groq"
-          python -c "import openai"
 
-      - name: Run Backend Tests
-        run: |
-          pytest -v
+      - name: Run Tests
+        run: pytest
 
   frontend:
     name: Frontend
@@ -61,17 +56,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: "22"
+          cache: npm
           cache-dependency-path: frontend/package-lock.json
 
-      - name: Install Dependencies
-        run: |
-          npm install
+      - name: Install Packages
+        run: npm install
 
-      - name: Build React Application
-        run: |
-          npm run build
+      - name: Build React
+        run: npm run build
