@@ -14,11 +14,13 @@ on:
 jobs:
 
   backend:
-
+    name: Backend
     runs-on: ubuntu-latest
 
-    steps:
+    env:
+      PYTHONPATH: ${{ github.workspace }}
 
+    steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -27,13 +29,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Python Dependencies
+      - name: Upgrade pip
         run: |
           python -m pip install --upgrade pip
+
+      - name: Install Dependencies
+        run: |
           pip install -r requirements.txt
 
       - name: Verify Backend Imports
         run: |
+          python -c "import app"
           python -c "import fastapi"
           python -c "import sqlalchemy"
           python -c "import groq"
@@ -41,10 +47,10 @@ jobs:
 
       - name: Run Backend Tests
         run: |
-          pytest
+          pytest -v
 
   frontend:
-
+    name: Frontend
     runs-on: ubuntu-latest
 
     defaults:
@@ -52,7 +58,6 @@ jobs:
         working-directory: frontend
 
     steps:
-
       - name: Checkout Repository
         uses: actions/checkout@v4
 
@@ -60,9 +65,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
 
-      - name: Build React App
-        run: npm run build
+      - name: Build React Application
+        run: |
+          npm run build
