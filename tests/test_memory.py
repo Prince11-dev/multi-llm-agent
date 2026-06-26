@@ -10,8 +10,6 @@ save_conversation(
     "FastAPI is a Python web framework."
 )
 
-history = get_history(
-    "test"
-)
+history = get_history("test")
 
 print(history)
