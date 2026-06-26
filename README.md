@@ -1,94 +1,172 @@
-# Multi-LLM Agent 🚀
+# 🚀 Multi-LLM Agent
 
-A production-ready AI agent platform powered by multiple Large Language Models (LLMs) and a modern React frontend.
+> **Production-ready AI Agent Platform powered by FastAPI, React, OpenAI, Gemini, Groq & DeepSeek**
 
-## Features
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Framework-009688?logo=fastapi)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/Prince11-dev/multi-llm-agent/ci.yml?branch=main&label=Build)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-* Multi-LLM support
+---
 
-  * Groq
-  * Gemini
-  * OpenAI
-  * DeepSeek
+## 📖 Overview
 
-* Intelligent model routing
+Multi-LLM Agent is a production-ready AI platform that intelligently routes requests across multiple Large Language Models while providing conversation memory, intelligent routing, web search capabilities, and a modern React interface.
 
-* Response aggregation and synthesis
+The project demonstrates scalable backend architecture using **FastAPI**, asynchronous Python programming, modular AI providers, persistent conversation memory, and a responsive frontend built with **React + Vite**.
 
-* Conversation memory using SQLite
+---
 
-* Tool integrations
+# ✨ Features
 
-  * Web Search
-  * Calculator
-  * Weather
+- 🤖 Multi-LLM Integration
+  - OpenAI
+  - Gemini
+  - Groq
+  - DeepSeek
 
-* FastAPI backend
+- 🧠 Intelligent Model Routing
 
-* React "Jarvis" frontend
+- 🔀 Multi-model Aggregation
 
-* REST APIs with Swagger documentation
+- 💬 Persistent Conversation Memory
 
-## Tech Stack
+- 🌐 Web Search Integration
 
-### Backend
+- ⚡ FastAPI REST API
 
-* Python
-* FastAPI
-* SQLAlchemy
-* SQLite
+- 🎨 Modern React Frontend
 
-### Frontend
+- 🔄 Asynchronous Request Processing
 
-* React
-* Vite
-* Axios
+- 📦 Modular Provider Architecture
 
-### AI Providers
+- 🧪 Automated GitHub Actions CI
 
-* Groq
-* Gemini
-* OpenAI
-* DeepSeek
+- 🐳 Docker Ready
 
-## Architecture
+- 🔒 Environment Variable Configuration
 
-User → React UI → FastAPI → Agent Router → LLM Providers → Response Synthesis → Memory & Tools
+---
 
-## API Endpoints
+# 🏗 Architecture
 
-* `/`
-* `/health`
-* `/ask`
-* `/smart`
-* `/agent`
-* `/memory`
-* `/search`
-
-## Installation
-
-```bash
-git clone https://github.com/Prince11-dev/multi-llm-agent.git
-cd multi-llm-agent
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python -m uvicorn app.main:app --reload
+```text
+                    ┌────────────────────┐
+                    │    React Frontend  │
+                    └─────────┬──────────┘
+                              │
+                        REST API Calls
+                              │
+                    ┌─────────▼──────────┐
+                    │      FastAPI       │
+                    └─────────┬──────────┘
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+        ▼                     ▼                     ▼
+ Intelligent Router     Aggregator Service     Memory Layer
+        │                     │                     │
+        │                     │              SQLite Database
+        │                     │
+        └──────────────┬──────┘
+                       │
+      ┌────────────────┼────────────────┐
+      ▼                ▼                ▼
+    Groq            Gemini          OpenAI
+                       │
+                       ▼
+                  DeepSeek
 ```
 
-Frontend:
+---
 
-```bash
-cd frontend
-npm install
-npm run dev
+# 🛠 Tech Stack
+
+## Backend
+
+- Python 3.12
+- FastAPI
+- SQLAlchemy
+- SQLite
+- AsyncIO
+- Uvicorn
+
+## AI Providers
+
+- OpenAI
+- Google Gemini
+- Groq
+- DeepSeek
+
+## Frontend
+
+- React
+- Vite
+- JavaScript
+- CSS
+
+## DevOps
+
+- Git
+- GitHub
+- GitHub Actions
+- Docker (Coming Soon)
+
+---
+
+# 📂 Project Structure
+
+```text
+multi-llm-agent/
+
+├── app/
+│   ├── memory/
+│   ├── middleware/
+│   ├── providers/
+│   ├── schemas/
+│   ├── services/
+│   ├── tools/
+│   ├── utils/
+│   └── main.py
+│
+├── frontend/
+│
+├── tests/
+│
+├── scripts/
+│
+├── .github/
+│   └── workflows/
+│
+├── requirements.txt
+├── pytest.ini
+├── README.md
+└── .env.example
 ```
 
-## Future Roadmap
+---
 
-* PDF Chat (RAG)
-* Streaming Responses
-* Authentication
-* Voice Assistant
-* Docker Deployment
-* Cloud Deployment
+## 🚀 Current Status
+
+- ✅ Backend CI Passing
+- ✅ Frontend CI Passing
+- ✅ Multi-LLM Integration
+- ✅ Memory Support
+- ✅ Intelligent Routing
+- ✅ Web Search
+- ✅ React Frontend
+- ✅ Production Repository Structure
+
+---
+
+## ⭐ Highlights
+
+- Production-ready FastAPI backend
+- Modern React frontend
+- Intelligent AI model selection
+- Modular architecture
+- Automated CI/CD pipeline
+- Easily extensible provider system
