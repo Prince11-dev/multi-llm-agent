@@ -324,7 +324,7 @@ The following screenshots demonstrate the primary capabilities of the platform.
 The landing page provides a clean interface for interacting with multiple AI providers.
 
 <p align="center">
-<img src="screenshots/01-homepage.png" width="95%">
+<img src="screenshots/multi-llm-response.png" width="95%">
 </p>
 
 ---
@@ -334,7 +334,7 @@ The landing page provides a clean interface for interacting with multiple AI pro
 Users can submit prompts and receive AI-generated responses through a responsive chat interface.
 
 <p align="center">
-<img src="screenshots/02-chat-interface.png" width="95%">
+<img src="screenshots/chat-interface.png" width="95%">
 </p>
 
 ---
@@ -344,7 +344,7 @@ Users can submit prompts and receive AI-generated responses through a responsive
 FastAPI automatically generates interactive API documentation.
 
 <p align="center">
-<img src="screenshots/03-api-docs.png" width="95%">
+<img src="screenshots/api-docs-swagger.png" width="95%">
 </p>
 
 ---
@@ -354,7 +354,7 @@ FastAPI automatically generates interactive API documentation.
 GitHub Actions automatically validates every push to the repository.
 
 <p align="center">
-<img src="screenshots/04-github-actions.png" width="95%">
+<img src="screenshots/github-actions-ci.png" width="95%">
 </p>
 
 ---
@@ -364,7 +364,7 @@ GitHub Actions automatically validates every push to the repository.
 The `/ask` endpoint queries multiple providers and synthesizes a unified response.
 
 <p align="center">
-<img src="screenshots/05-ask-endpoint.png" width="95%">
+<img src="screenshots/intelligent-routing.png" width="95%">
 </p>
 
 ---
@@ -375,7 +375,7 @@ A short demonstration of the application can be viewed below.
 
 <p align="center">
 
-<img src="screenshots/demo.gif" width="100%">
+<img src="screenshots/chat-interface.png" width="100%">
 
 </p>
 
@@ -387,7 +387,7 @@ A short demonstration of the application can be viewed below.
 
 <p align="center">
 
-<img src="screenshots/architecture-diagram.png" width="100%">
+<img src="screenshots\architecture-diagram.png" width="100%">
 
 </p>
 
